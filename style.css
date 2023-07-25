@@ -5,9 +5,17 @@ body {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 460px) {
-  .bg {
-    overflow: hidden;
+@media screen and (max-width: 480px) {
+  .box ul li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px; /* Vous pouvez ajuster la taille de la police selon vos préférences */
+  }
+
+  .box ul li span.price {
+    margin-left: 0; /* Pour réduire l'espace entre le produit et le prix sur les petits écrans */
   }
 }
 
