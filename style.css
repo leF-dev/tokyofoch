@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Heebo', sans-serif;
+  scroll-behavior: smooth;
+}
+
+#top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: white;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 100px;
+  z-index: 9;
+}
+
+#top.visible {
+  opacity: 1;
+}
+
+#top i {
+  color: #383434;
+}
+
+.main-image {
+  width: 100%;
+  height: 550px;
+}
+
+#main-image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  position: fixed;
+  z-index: -3;
+}
+
+#TKF_LOGO {
+  display: block;
+  margin: auto;
+  width: 400px;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.241);
+  height: 550px;
+}
+
+#slogan {
+  color: white;
+  font-size: 2.7em;
+  text-align: center;
+  margin: auto;
+}
+
+.devis {
+  color: white;
+  text-decoration: none;
+  background-color: #ff2200;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 150px;
+}
+
+.devis:hover {
+  color: #ff2200;
+  background-color: white;
+  border: 1px solid #ff2200;
+  transition-duration: 0.5s;
+}
+
+.charte {
+  width: 100%;
+  min-height: 300px;
+  background-image: url(img/fond.jpg);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: solid 7px #ff2200;
+  text-align: center;
+  padding: 40px 60px 40px 60px;
+  line-height: 30px;
+  color: #383434;
+  font-size: 1em;
+}
+
+#charte {
+  font-size: 1.7em;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 300px;
+  background-color: #383434;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.subtitle {
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  border-radius: 0.5em;
+  background-color: #383434;
+  border-bottom: 10px solid #ff2200;
+}
+
+span.num {
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+span.text {
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 26vmin;
+    width: 26vmin;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 25vmin;
+    font-size: 8px;
+  }
+}
+
+.container-arg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-image: url(img/fond.jpg);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: solid 7px #ff2200;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+  padding: 50px;
+  width: 50vmin;
+  min-height: 28vmin;
+  font-size: 20px;
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: #383434;
+  border-bottom: 10px solid #ff2200;
+  color: white;
+  
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.box i {
+  margin-right: 10px;
+}
+
+.box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.box ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box ul li span.price {
+  margin-left: 20px;
+}
+
+
+.slider {
+  height: 60vh;
+  position: relative;
+  width: 40%;
+  margin: auto;
+  border-left: solid 7px #ff2200;
+  border-right: solid 7px #ff2200;
+}
+
+
+@media screen and (max-width: 765px) {
+  .slider {
+    width: 100%;
+  }
+  .camouflage {
+    background-image: url(img/fond.jpg);
+    border-top: solid 7px #ff2200;
+  }
+}
+
+.slider img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+
+.suivant,
+.precedent {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.suivant {
+  right: 1rem;
+}
+
+.precedent {
+  left: 1rem;
+}
+
+.camouflage {
+  background-image: url(img/fond.jpg);
+  border-left: solid 7px #ff2200;
+  border-right: solid 7px #ff2200;
+  border-top: solid 7px #ff2200;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #383434;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+strong {
+  font-size: 1.4rem;
+}
+
+.footer {
+  background-color: #383434;
+  width: 100%;
+  min-height: 550px;
+  color: white;
+  text-align: center;
+}
+
+#TKF_FOOTER {
+  display: block;
+  margin: auto;
+  width: 250px;
+}
+
+h3 {
+  font-size: 1.9rem;
+}
+
+#mentions {
+  text-decoration: none;
+  color: white;
+}
+
+#mentions:hover {
+  color: #ff2200;
+  transition-duration: 0.5s;
+}
+
+#social li {
+  display: inline;
+  margin: 20px;
+}
+
+.contact {
+  line-height: 30px;
+}
+
+.footer i:hover {
+  color: #ff2200;
+  transition-duration: 0.5s;
+}
